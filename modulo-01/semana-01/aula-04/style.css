@@ -1,0 +1,32 @@
+.destaque {
+    background-color: lime;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.table {
+    border: 1px solid black;
+}
+
+nav {
+    text-align: right;
+}
+
+.content {
+    box-sizing: border-box;
+    width: 300px;
+    margin: 10px;
+    border: 10px solid blue;
+    padding: 10px;
+    background-color: bisque;
+}
+
+body > * > * {
+    background-color: blueviolet;
+}
+
+[input] {
+    background-color: aqua;
+}
