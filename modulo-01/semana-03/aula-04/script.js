@@ -95,14 +95,12 @@ person2.married = false;
 
 const {name: personName, ...rest} = person2;
 
-const demaisDados = {...rest};
+// let married;
 
-let married;
-
-demaisDados.married ? married = 'sim' : married = 'não';
+rest.married ? married = 'sim' : married = 'não';
 
 
-console.log(`O nome da pessoa é ${personName}. Seus demais dados são:\nIdade: ${demaisDados.age}\nCasado: ${married}`);
+console.log(`O nome da pessoa é ${personName}. Seus demais dados são:\nIdade: ${rest.age}\nCasado(a): ${married}`);
 
 // console.log(`O cliente é ${personName}`);
 
