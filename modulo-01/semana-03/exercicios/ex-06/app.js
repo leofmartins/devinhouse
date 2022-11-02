@@ -1,8 +1,15 @@
-function verificaPalindromo(str) {
-  const [...array1] = str.toLowerCase().replace(' ', '').replace('-', '').replace('.', '').replace('!','');
-  const array2 = array1;
-  array1.reverse();
-  array2.every((element, index) => array1[index] === element);
+// function verificaPalindromo(str) {
+//   let stringTratada = str.toLowerCase().replace(/\W/g, '');
+//   let [...arrauAux] = stringTratada;
+//
+//   return arrauAux.reverse().join('') === stringTratada;
+// }
+
+const verificaPalindromo = (str) => {
+  let stringTratada = str.toLowerCase().replace(/\W/g, '');
+  let [...arrauAux] = stringTratada;
+
+  return arrauAux.reverse().join('') === stringTratada;
 }
 
-console.log(verificaPalindromo('Julia'));
+console.log(verificaPalindromo('Socorram-me, subi no onibus em Marrocos!'));
