@@ -45,11 +45,11 @@
 // }
 
 //
+// importando um default
+import Rect from "./Rectangle.mjs";
 
-import { Rectangle } from "./Rectangle.mjs";
-
-const rect1 = new Rectangle(3, 6);
-const rect2 = new Rectangle(2, 7);
+const rect1 = new Rect(3, 6);
+const rect2 = new Rect(2, 7);
 
 console.log(rect1);
 console.log(rect2);
@@ -58,15 +58,15 @@ console.log(rect1.calcArea());
 console.log(rect2.calcArea());
 
 console.log(Math);
-console.log(Rectangle);
+console.log(Rect);
 
 console.log(Math.PI);
 
 console.log({Array});
 
-console.log(Rectangle.isRectangle(rect1));
+console.log(Rect.isRectangle(rect1));
 
-class Square extends Rectangle {
+class Square extends Rect {
   constructor(base) {
     super(base, base);
   }
@@ -82,19 +82,20 @@ const squareA = new Square(2);
 console.log(squareA);
 console.log(squareA.calcArea());
 
-console.log(Rectangle.isRectangle(squareA));
+console.log(Rect.isRectangle(squareA));
 console.log(Square.isSquare(rect1));
 
-class Line extends Square {
-  constructor() {
-    super(raio);
-  }
-  calcArea() {
-    return super.calcArea();
-  }
-}
-
-console.log(squareA.calcArea());
+// teste de sub-sub classe
+// class Line extends Square {
+//   constructor() {
+//     super(raio);
+//   }
+//   calcArea() {
+//     return super.calcArea();
+//   }
+// }
+//
+// console.log(squareA.calcArea());
 
 
 // Pessoa = {

@@ -1,4 +1,4 @@
-export class Rectangle {
+export default class Rectangle {
   // atributo privado utiliza-se no início
   static blah = 'lololol'
   constructor(heigth, width) {
