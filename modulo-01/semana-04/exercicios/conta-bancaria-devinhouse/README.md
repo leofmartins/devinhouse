@@ -1,6 +1,6 @@
 # Projeto Conta Bancária DEVinHouse
 
-Projeto de uma conta bancária pessoa física com as seguintes fuções:
+Projeto de uma conta bancária pessoa física com as seguintes funções:
 
 - Cadastro de clientes
 - Depósitos
