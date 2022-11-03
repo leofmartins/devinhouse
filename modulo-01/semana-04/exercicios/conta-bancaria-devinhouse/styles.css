@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Secular One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    display: flex;
+    flex-direction: row;
+    background-color: cornflowerblue;
+    padding: 10px;
+}
+header {
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+footer {
+    justify-content: space-between;
+}
+
+#fale-conosco {
+    text-decoration: none;
+}
