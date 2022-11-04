@@ -194,7 +194,7 @@ class Papagaio extends Ave {
   }
 }
 
-const passarinho2 = new Papagaio('Alfredo', 'Estepô!');
+const passarinho2 = new Papagaio('Alfredo');
 
 console.log(passarinho2.getNome);
 passarinho2.imprime();
