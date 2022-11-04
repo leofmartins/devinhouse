@@ -1,10 +1,10 @@
 import {Funcionario} from "./Funcionario.js";
 
-const ada = new Funcionario('123.456.789-00', 'Leonardo da Fonseca Martins', 2500);
+const ada = new Funcionario("528.442.040-31", "Ada Lovelace", 1000);
 
 console.log(ada.salario);
 
-ada.promover(10);
+ada.promover(50);
 
 console.log(ada.salario)
 
