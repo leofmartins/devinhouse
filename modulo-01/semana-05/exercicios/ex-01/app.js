@@ -1,4 +1,4 @@
-import {Funcionario} from "./Funcionario.js";
+import Funcionario from "./Funcionario.js";
 
 const ada = new Funcionario("528.442.040-31", "Ada Lovelace", 1000);
 

@@ -1,4 +1,4 @@
-export class Funcionario {
+export default class Funcionario {
   cpf
   nomeCompleto
   salario
