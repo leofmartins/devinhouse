@@ -7,5 +7,3 @@ const valor = melao.obterValorTotal();
 console.log(valor);
 
 console.log(melao.valorTotal);
-
-// Falta validar quantia e preco para ser positiva ou 0
