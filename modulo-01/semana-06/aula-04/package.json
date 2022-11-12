@@ -1,0 +1,9 @@
+{
+  "name": "aula-04",
+  "version": "1.0.0",
+  "dependencies": {
+  },
+  "scripts": {
+    "start": "json-server --watch db.json"
+  }
+}
