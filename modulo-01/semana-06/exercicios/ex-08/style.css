@@ -1,0 +1,16 @@
+#list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: aquamarine;
+}
+
+.info {
+    padding: 10px;
+}
