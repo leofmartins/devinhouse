@@ -1,11 +1,155 @@
-<h1 class="display-1">Hello, world!</h1>
+<!--<h1 class="display-1">Hello, world!</h1>-->
 <!--<button type="button" class="btn btn-success">Success</button>-->
 
-<div class="container" >
-  <nav class="row">
-    <div class="col-3">Div 1</div>
-    <div class="col-5">Div 2</div>
-    <div class="col-2">Div 3</div>
-    <div class="col-2">Div 4</div>
-  </nav>
+<!--<div class="container" >-->
+<!--  <nav class="row">-->
+<!--    <div class="col-3">Div 1</div>-->
+<!--    <div class="col-5">Div 2</div>-->
+<!--    <div class="col-2">Div 3</div>-->
+<!--    <div class="col-2">Div 4</div>-->
+<!--  </nav>-->
+<!--</div>-->
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <form>-->
+<!--        <div class="mb-3">-->
+<!--          <label for="exampleInputEmail1" class="form-label">Email address</label>-->
+<!--          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">-->
+<!--          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+<!--        </div>-->
+<!--        <div class="mb-3">-->
+<!--          <label for="exampleInputPassword1" class="form-label">Password</label>-->
+<!--          <input type="password" class="form-control" id="exampleInputPassword1">-->
+<!--        </div>-->
+<!--        <div class="mb-3 form-check">-->
+<!--          <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--          <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
+<!--        </div>-->
+<!--        <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-6">
+      <img src="./src/app/support-team.png" alt="imagem-time-de-suporte">
+    </div>
+
+    <div class="col" style="background-color: beige">
+      <form class="needs-validation" novalidate>
+
+        <div class="row">
+
+          <div class="col-6 mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+          <div class="col-6">
+            <label for="last-name" class="form-label">Sobrenome</label>
+            <input type="text" id="last-name" class="form-control">
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-12">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" id="email" class="form-control">
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-6">
+
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" id="password" class="form-control">
+
+          </div>
+
+          <div class="col-6">
+
+            <label for="age" class="form-label">Idade</label>
+            <input type="number" id="age" class="form-control">
+
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-12">
+
+            <label for="city" class="form-label">Mora na região de Santa Catarina</label>
+            <select name="city" id="city" class="form-select">
+              <option>Selecione uma opção</option>
+              <option value="yes">Sim</option>
+              <option value="no">Não</option>
+            </select>
+
+          </div>
+
+          <div class="col-6">
+
+            <p class="form-check-label">Quais tecnologias você já estudou?</p>
+
+
+
+<!--                <input type="checkbox" name="docker" id="docker" class="form-check-input">Docker-->
+<!--                <input type="checkbox" name="java" id="java" class="form-check-input">Java-->
+<!--                <input type="checkbox" name="javascript" id="javascript" class="form-check-input">JavaScript-->
+<!--                <input type="checkbox" name="python" id="python" class="form-check-input">Python-->
+
+          </div>
+
+
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" name="angular" id="angular" class="form-check-input">
+          <label for="angular" class="form-check-label">
+            Angular
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="angular" id="docker" class="form-check-input">
+          <label for="angular" class="form-check-label">
+            Docker
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="angular" id="java" class="form-check-input">
+          <label for="angular" class="form-check-label">
+            Java
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="angular" id="javascript" class="form-check-input">
+          <label for="angular" class="form-check-label">
+            JavaScript
+          </label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="angular" id="python" class="form-check-input">
+          <label for="angular" class="form-check-label">
+            Python
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+
+
+    </div>
+
+  </div>
+
 </div>
