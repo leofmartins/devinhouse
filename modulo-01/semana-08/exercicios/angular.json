@@ -3,42 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-exercices": {
+    "exercicios": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:component": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "ntap",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-exercices",
+            "outputPath": "dist/exercicios",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -50,7 +25,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -85,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-exercices:build:production"
+              "browserTarget": "exercicios:build:production"
             },
             "development": {
-              "browserTarget": "angular-exercices:build:development"
+              "browserTarget": "exercicios:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -96,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-exercices:build"
+            "browserTarget": "exercicios:build"
           }
         },
         "test": {
@@ -121,6 +97,6 @@
     }
   },
   "cli": {
-    "analytics": "99ddbe5d-e3da-4b20-847a-79c5fe362942"
+    "analytics": "bdf0172e-14fb-4223-bbe7-ceef2b8b3f83"
   }
 }
