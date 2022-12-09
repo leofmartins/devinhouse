@@ -25,7 +25,7 @@
 <!--</ul>-->
 
 <ul class="list-group">
-  <li *ngFor="let item of lista" class="list-group-item">
+  <li *ngFor="let item of lista" class="list-group-item" [ngClass]="{'opacity-50': item.lido}">
     <h3>{{ item.titulo }}</h3>
     <p>{{ item.conteudo }}</p>
     <p>{{ item.data }}</p>
