@@ -26,8 +26,13 @@
 
 <ul class="list-group">
   <li *ngFor="let item of lista" class="list-group-item">
-    <h3>{{ item.titulo}}</h3>
+    <h3>{{ item.titulo }}</h3>
     <p>{{ item.conteudo }}</p>
     <p>{{ item.data }}</p>
+    <input type="checkbox" name="" id="" [(ngModel)]="item.lido">
+    <p [ngSwitch]="item.lido">
+      <span *ngSwitchCase="true">Lido</span>
+      <span *ngSwitchDefault>Não lido</span>
+    </p>
   </li>
 </ul>

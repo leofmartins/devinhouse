@@ -32,5 +32,7 @@ import { Model } from "../../model";
   styleUrls: ['./notification-list.component.css']
 })
 export class NotificationListComponent {
+
   lista = Model;
+
 }
