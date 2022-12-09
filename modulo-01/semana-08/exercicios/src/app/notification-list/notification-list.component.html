@@ -1,25 +1,33 @@
+<!--<ul class="list-group">-->
+<!--  <li class="list-group-item">-->
+<!--    <h4>Lorem ipsum</h4>-->
+<!--    <p>Excepteur sint occaecat cupidatat</p>-->
+<!--    <p>-->
+<!--      29 min ago-->
+<!--    </p>-->
+<!--  </li>-->
+
+<!--  <li class="list-group-item">-->
+<!--    <h4>Lorem ipsum</h4>-->
+<!--    <p>Excepteur sint occaecat cupidatat</p>-->
+<!--    <p>-->
+<!--      1 day ago-->
+<!--    </p>-->
+<!--  </li>-->
+
+<!--  <li class="list-group-item">-->
+<!--    <h4>Lorem ipsum</h4>-->
+<!--    <p>Excepteur sint occaecat cupidatat</p>-->
+<!--    <p>-->
+<!--      2 days ago-->
+<!--    </p>-->
+<!--  </li>-->
+<!--</ul>-->
+
 <ul class="list-group">
-  <li class="list-group-item">
-    <h4>Lorem ipsum</h4>
-    <p>Excepteur sint occaecat cupidatat</p>
-    <p>
-      29 min ago
-    </p>
-  </li>
-
-  <li class="list-group-item">
-    <h4>Lorem ipsum</h4>
-    <p>Excepteur sint occaecat cupidatat</p>
-    <p>
-      1 day ago
-    </p>
-  </li>
-
-  <li class="list-group-item">
-    <h4>Lorem ipsum</h4>
-    <p>Excepteur sint occaecat cupidatat</p>
-    <p>
-      2 days ago
-    </p>
+  <li *ngFor="let item of lista" class="list-group-item">
+    <h3>{{ item.titulo}}</h3>
+    <p>{{ item.conteudo }}</p>
+    <p>{{ item.data }}</p>
   </li>
 </ul>
