@@ -4,7 +4,7 @@
     ngFor let-botao [ngForOf]="botoesFiltro"
     >
       <button
-        (click)="metodoCapturaEventoClick(botao.nome)"
+        (click)="obtemFiltro(botao.nome)"
         type="button"
         class="btn btn-outline-dark"
         >

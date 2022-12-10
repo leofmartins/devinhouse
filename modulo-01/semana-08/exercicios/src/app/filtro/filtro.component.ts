@@ -7,10 +7,10 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class FiltroComponent {
 
-  @Output() variavelOutput = new EventEmitter<string>();
+  @Output() filtro = new EventEmitter<string>();
 
-  metodoCapturaEventoClick(value: string) {
-    this.variavelOutput.emit(value);
+  obtemFiltro(value: string) {
+    this.filtro.emit(value);
     console.log(value);
   }
   botoesFiltro = [

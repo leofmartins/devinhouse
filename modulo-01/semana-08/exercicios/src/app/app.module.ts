@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {FormsModule} from "@angular/forms";
 import { FiltroComponent } from './filtro/filtro.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FiltroComponent } from './filtro/filtro.component';
     NotificationListComponent,
     HeaderComponent,
     FooterComponent,
-    FiltroComponent
+    FiltroComponent,
+    HomeComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
