@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-filtro',
@@ -15,14 +16,14 @@ export class FiltroComponent {
   }
   botoesFiltro = [
     {
-      nome: 'Todos',
-      id: 'todos'
+      nomeFiltro: 'Todos',
+      idFiltro: 'todos'
     },{
-      nome: 'Lidos',
-      id: 'lidos'
+      nomeFiltro: 'Lidos',
+      idFiltro: 'lidos'
     },{
-      nome: 'Não lidos',
-      id: 'nao-lidos'
+      nomeFiltro: 'Não lidos',
+      idFiltro: 'nao-lidos'
     }
   ]
 }

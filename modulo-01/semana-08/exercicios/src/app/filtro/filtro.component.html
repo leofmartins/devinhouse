@@ -4,11 +4,11 @@
     ngFor let-botao [ngForOf]="botoesFiltro"
     >
       <button
-        (click)="obtemFiltro(botao.nome)"
+        (click)="obtemFiltro(botao.idFiltro)"
         type="button"
         class="btn btn-outline-dark"
         >
-        {{ botao.nome }}
+        {{ botao.nomeFiltro }}
       </button>
     </ng-template>
   </div>

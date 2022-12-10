@@ -11,6 +11,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { RouterModule, Routes } from "@angular/router";
 import * as path from "path";
+import { LidosComponent } from './notification-list/lidos/lidos.component';
+import { NaoLidosComponent } from './notification-list/nao-lidos/nao-lidos.component';
 
 const childRoutes: Routes = [
   {
@@ -18,10 +20,10 @@ const childRoutes: Routes = [
     component: NotificationListComponent
   },  {
     path: 'lidos',
-    component: NotificationListComponent
+    component: LidosComponent
   },  {
     path: 'nao-lidos',
-    component: NotificationListComponent
+    component: NaoLidosComponent
   }
 ]
 
@@ -32,11 +34,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },{
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    children: childRoutes
   },{
     path: 'sobre',
-    component: SobreComponent,
-    children: childRoutes
+    component: SobreComponent
   },
 ]
 
@@ -48,7 +50,9 @@ const routes: Routes = [
     FooterComponent,
     FiltroComponent,
     HomeComponent,
-    SobreComponent
+    SobreComponent,
+    LidosComponent,
+    NaoLidosComponent
   ],
   imports: [
     BrowserModule,
