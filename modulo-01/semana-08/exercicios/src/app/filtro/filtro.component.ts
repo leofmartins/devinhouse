@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-filtro',
@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./filtro.component.css']
 })
 export class FiltroComponent {
+
+  @Output() variavelOutput = new EventEmitter<string>();
+
+  metodoCapturaEventoClick(value: string) {
+    this.variavelOutput.emit(value);
+  }
   botoesFiltro = [
     {
       nome: 'Todos',
