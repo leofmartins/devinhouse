@@ -11,6 +11,7 @@ export class FiltroComponent {
 
   metodoCapturaEventoClick(value: string) {
     this.variavelOutput.emit(value);
+    console.log(value);
   }
   botoesFiltro = [
     {
