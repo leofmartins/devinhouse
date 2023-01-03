@@ -4,7 +4,13 @@ const nome = document.getElementById("nome");
 const cpf = document.getElementById("cpf");
 const celular = document.getElementById("celular");
 const senha = document.getElementById("senha");
-const formulario = document.getElementById("form");
+const formAbrirConta = document.getElementById("form-abrir-conta");
+
+const tipo = document.querySelectorAll("input[type='radio']");
+const conta = document.getElementById("conta");
+const valor = document.getElementById("valor");
+const formMovimentarConta = document.getElementById("form-movimentar-conta");
+const opcaoConsultaSaldo = document.getElementById("consulta-saldo");
 
 function salvarConta(event) {
   event.preventDefault();
@@ -25,4 +31,21 @@ function salvarConta(event) {
   }
 }
 
-formulario.addEventListener("submit", salvarConta);
+function movimentarConta(event) {
+  event.preventDefault();
+
+  // implementar movimentação de conta
+}
+
+formAbrirConta.addEventListener("submit", salvarConta);
+formMovimentarConta.addEventListener("submit", movimentarConta);
+
+tipo.forEach(element => {
+  element.onclick = () => {
+    if(opcaoConsultaSaldo.checked) {
+      valor.disabled = true;
+    } else {
+      valor.disabled = false;
+    };
+  }
+})
