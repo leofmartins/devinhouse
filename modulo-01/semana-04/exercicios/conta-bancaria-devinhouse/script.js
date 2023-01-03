@@ -42,10 +42,6 @@ formMovimentarConta.addEventListener("submit", movimentarConta);
 
 tipo.forEach(element => {
   element.onclick = () => {
-    if(opcaoConsultaSaldo.checked) {
-      valor.disabled = true;
-    } else {
-      valor.disabled = false;
-    };
+    valor.disabled = opcaoConsultaSaldo.checked;
   }
 })
