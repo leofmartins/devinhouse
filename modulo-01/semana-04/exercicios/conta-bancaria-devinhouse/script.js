@@ -9,6 +9,7 @@ const formAbrirConta = document.getElementById("form-abrir-conta");
 const tipo = document.querySelectorAll("input[type='radio']");
 const conta = document.getElementById("conta");
 const valor = document.getElementById("valor");
+const senhaMovimentar = document.getElementById("senha-movimentar");
 const formMovimentarConta = document.getElementById("form-movimentar-conta");
 const opcaoConsultaSaldo = document.getElementById("consulta-saldo");
 
@@ -29,16 +30,74 @@ function salvarConta(event) {
   if(contas.length > lenghtConta) {
     alert(`Conta ${contas[contas.length - 1].conta} criada com sucesso!`);
   }
+
+  formAbrirConta.reset();
 }
 
-function movimentarConta(event) {
+function encontraConta(numeroConta) {
+  return contas.find(element => element.conta === numeroConta)
+}
+
+function verificaSeContaExiste(numeroConta) {
+  return !!encontraConta(numeroConta);
+}
+
+function verificaSenha(numeroConta, senha) {
+  if (verificaSeContaExiste(numeroConta)) {
+    return encontraConta(numeroConta).senha === senha;
+  }
+  return false;
+}
+
+function verificaOperacao() {
+  let opcaoEscolhida = "";
+  tipo.forEach(element => {
+    if (element.checked) {
+      opcaoEscolhida = element.id;
+    }
+  });
+  return opcaoEscolhida;
+}
+
+function verificacaoGeral(numeroConta, senha) {
+  if (verificaSenha(numeroConta, senha)) {
+    return verificaOperacao()
+  }
+  alert("Senha ou conta inválida. Tente novamente.");
+}
+
+function realizaOperacao(event) {
   event.preventDefault();
 
-  // implementar movimentação de conta
+  const contaEmMovimentacao = encontraConta(Number(conta.value));
+  const valorDaMovimentacao = Number(valor.value);
+
+  switch (verificacaoGeral(Number(conta.value), senhaMovimentar.value)) {
+    case "saque":
+      if (contaEmMovimentacao.saldo >= valorDaMovimentacao) {
+        contaEmMovimentacao.saldo -= valorDaMovimentacao;
+        alert(`Saque efetuado com sucesso. Novo saldo: R$ ${contaEmMovimentacao.saldo}`);
+      } else {
+       alert("Saldo insuficiente.")
+      }
+      break;
+    case "deposito":
+      contaEmMovimentacao.saldo += valorDaMovimentacao;
+      alert(`Depósito efetuado com sucesso. Novo saldo: R$ ${contaEmMovimentacao.saldo}`);
+      break;
+    case "consulta-saldo":
+      alert(`O saldo da conta é R$ ${contaEmMovimentacao.saldo}`);
+      break;
+    default:
+      alert("Escolha uma opção de movimentação.");
+  }
+
+  formMovimentarConta.reset();
 }
 
 formAbrirConta.addEventListener("submit", salvarConta);
-formMovimentarConta.addEventListener("submit", movimentarConta);
+formMovimentarConta.addEventListener("submit", realizaOperacao);
+
 
 tipo.forEach(element => {
   element.onclick = () => {
