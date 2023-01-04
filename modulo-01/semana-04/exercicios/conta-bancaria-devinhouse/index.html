@@ -12,7 +12,7 @@
 </head>
 <body>
   <header>
-    <img src="https://img.icons8.com/3d-fluency/94/null/card-wallet.png"/>
+    <img src="https://img.icons8.com/3d-fluency/94/null/card-wallet.png" alt="app-logo"/>
     <div>
       <h1>DevBanco</h1>
       <p>O banco dos desenvolvedores</p>
@@ -22,32 +22,50 @@
     <form id="form-abrir-conta">
       <fieldset>
         <legend>Abrir Conta</legend>
-        <label for="nome">Nome: </label>
-        <input type="text" id="nome" placeholder="Digite seu nome" required>
-        <label for="cpf">CPF: </label>
-        <input type="text" id="cpf" placeholder="000.000.000-00" minlength="11" required>
-        <label for="celular">Celuar: </label>
-        <input type="text" id="celular" placeholder="(00) 00000-0000" minlength="11" required>
-        <label for="senha">Senha: </label>
-        <input type="password" id="senha" placeholder="Digite uma senha de 6 números" minlength="6" required>
+        <p>Digite seus dados e clice em Criar Conta:</p>
+        <div>
+          <label for="nome">Nome: </label>
+          <input type="text" id="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div>
+          <label for="cpf">CPF: </label>
+          <input type="text" id="cpf" placeholder="000.000.000-00" minlength="11" required>
+        </div>
+        <div>
+          <label for="celular">Celular: </label>
+          <input type="text" id="celular" placeholder="(00) 00000-0000" minlength="11" required>
+        </div>
+        <div>
+          <label for="senha">Senha: </label>
+          <input type="password" id="senha" placeholder="Digite uma senha de 6 números" minlength="6" required>
+        </div>
         <button type="submit" id="botao">Criar conta</button>
       </fieldset>
     </form>
     <form id="form-movimentar-conta">
       <fieldset>
         <legend>Movimentar Conta</legend>
-        <label for="saque">Saque</label>
-        <input type="radio" name="tipo-movimentacao" id="saque" value="saque">
-        <label for="deposito">Depósito</label>
-        <input type="radio" name="tipo-movimentacao" id="deposito" value="deposito">
-        <label for="consulta-saldo"></label>
-        <input type="radio" name="tipo-movimentacao" id="consulta-saldo" value="consultar-saldo">
-        <label for="valor">Valor: </label>
-        <input type="number" id="valor" required>
-        <label for="conta">Conta: </label>
-        <input type="text" id="conta" required>
-        <label for="senha-movimentar">Senha: </label>
-        <input type="password" name="senha" id="senha-movimentar" required>
+        <p>Escolha uma opção:</p>
+        <div>
+          <input type="radio" name="tipo-movimentacao" id="saque" value="saque">
+          <label for="saque">Saque </label>
+          <input type="radio" name="tipo-movimentacao" id="deposito" value="deposito">
+          <label for="deposito">Depósito </label>
+          <input type="radio" name="tipo-movimentacao" id="consulta-saldo" value="consultar-saldo">
+          <label for="consulta-saldo">Consultar Saldo </label>
+        </div>
+        <div>
+          <label for="valor">Valor: </label>
+          <input type="number" id="valor" required>
+        </div>
+        <div>
+          <label for="conta">Conta: </label>
+          <input type="text" id="conta" required>
+        </div>
+        <div>
+          <label for="senha-movimentar">Senha: </label>
+          <input type="password" name="senha" id="senha-movimentar" required>
+        </div>
         <button type="submit">Processar: </button>
       </fieldset>
     </form>
@@ -55,8 +73,8 @@
   <footer>
     <p><strong>DevBanco&reg</strong> - O banco dos desenvolvedores</p>
     <p>0800 800 8080</p>
-    <a href="#"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png"/></a>
-    <a href="#"><img src="https://img.icons8.com/fluency/48/null/linkedin.png"/></a>
+    <a href="#"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png" alt="instagram-icon"/></a>
+    <a href="#"><img src="https://img.icons8.com/fluency/48/null/linkedin.png" alt="linkedin-icon"/></a>
     <a href="#" id="fale-conosco">Fale Conosco</a>
   </footer>
 </body>

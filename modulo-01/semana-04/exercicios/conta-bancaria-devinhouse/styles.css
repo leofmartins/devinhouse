@@ -28,3 +28,13 @@ footer {
 #fale-conosco {
     text-decoration: none;
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
