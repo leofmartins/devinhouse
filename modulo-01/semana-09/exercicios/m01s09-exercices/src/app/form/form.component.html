@@ -1,0 +1,32 @@
+<h2 class="h1">Fomulário de Aula</h2>
+<form>
+  <div class="mb-3">
+    <label for="nome" class="form-label">Nome: </label>
+    <input class="form-control" type="text" name="nome" id="nome">
+  </div>
+  <div class="mb-3">
+    <label for="carga-horaria" class="form-label">Carga Horária: </label>
+    <input class="form-control" type="number" name="carga-horaria" id="carga-horaria">
+  </div>
+  <div class="mb-3">
+    <label for="escola" class="form-label">Escola: </label>
+    <input class="form-control" type="text" name="escola" id="escola">
+  </div>
+  <label class="form-check-label" for="professor">Professor: </label>
+  <select class="form-select" name="professor" id="professor">
+    <option value="">Escolha um professor...</option>
+    <option value="otavio">Otávio</option>
+    <option value="vivian">Vivian</option>
+    <option value="leandro">Leandro</option>
+    <option value="claudia">Cláudia</option>
+  </select>
+  <br>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="materia-opcional" id="materia-opcional-sim">
+    <label class="form-check-label" for="materia-opcional-sim">Opcional</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="materia-opcional" id="materia-opcional-nao">
+    <label class="form-check-label" for="materia-opcional-nao">Obrigatória</label>
+  </div>
+</form>
