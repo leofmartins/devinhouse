@@ -1,32 +1,58 @@
 <h2 class="h1">Fomulário de Aula</h2>
-<form>
-  <div class="mb-3">
+<div class="card-group">
+  <div class="mb-3 p-3">
     <label for="nome" class="form-label">Nome: </label>
     <input class="form-control" type="text" name="nome" id="nome">
   </div>
-  <div class="mb-3">
+  <div class="mb-3 p-3">
     <label for="carga-horaria" class="form-label">Carga Horária: </label>
     <input class="form-control" type="number" name="carga-horaria" id="carga-horaria">
   </div>
-  <div class="mb-3">
+  <div class="mb-3 p-3">
     <label for="escola" class="form-label">Escola: </label>
     <input class="form-control" type="text" name="escola" id="escola">
   </div>
-  <label class="form-check-label" for="professor">Professor: </label>
-  <select class="form-select" name="professor" id="professor">
-    <option value="">Escolha um professor...</option>
-    <option value="otavio">Otávio</option>
-    <option value="vivian">Vivian</option>
-    <option value="leandro">Leandro</option>
-    <option value="claudia">Cláudia</option>
-  </select>
+  <div class="mb-3 p-3">
+    <label class="form-check-label" for="professor">Professor: </label>
+    <select class="form-select" name="professor" id="professor">
+      <option value="">Escolha um professor...</option>
+      <option value="otavio">Otávio</option>
+      <option value="vivian">Vivian</option>
+      <option value="leandro">Leandro</option>
+      <option value="claudia">Cláudia</option>
+    </select>
+  </div>
   <br>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="materia-opcional" id="materia-opcional-sim">
-    <label class="form-check-label" for="materia-opcional-sim">Opcional</label>
+  <div class="mb-3 p-3">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="materia-opcional" id="materia-opcional-sim">
+      <label class="form-check-label" for="materia-opcional-sim">Opcional</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="materia-opcional" id="materia-opcional-nao">
+      <label class="form-check-label" for="materia-opcional-nao">Obrigatória</label>
+    </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Enviar
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Sucesso!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Formulário enviado com sucesso!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="materia-opcional" id="materia-opcional-nao">
-    <label class="form-check-label" for="materia-opcional-nao">Obrigatória</label>
-  </div>
-</form>
+</div>
