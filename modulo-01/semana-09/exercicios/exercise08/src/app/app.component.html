@@ -1,9 +1,3 @@
-<form class="m-3">
-  <label for="busca" class="form-label">Busca: </label>
-  <input type="text" name="busca" id="busca" class="form-control" #termoBuscado>
-
-</form>
 <app-busca
-  [busca]="termoBuscado.value"
   (termoBuscado)="logTermoBuscado($event)">
 </app-busca>

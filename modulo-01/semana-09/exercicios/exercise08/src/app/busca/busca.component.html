@@ -1,3 +1,4 @@
-<button type="button" class="btn btn-primary mt-3"
-  (click)="returnToParent(busca)"
-  >Buscar</button>
+<form class="m-3">
+  <label for="busca" class="form-label">Busca: </label>
+  <input type="text" name="busca" id="busca" class="form-control" #termoBuscado (keyup)="returnToParent(termoBuscado.value)">
+</form>

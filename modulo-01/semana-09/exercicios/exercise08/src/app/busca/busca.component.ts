@@ -6,8 +6,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./busca.component.css']
 })
 export class BuscaComponent {
-  @Input() busca!: string;
-
   @Output() termoBuscado = new EventEmitter<string>();
 
   returnToParent(value: string) {
