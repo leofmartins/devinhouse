@@ -1,0 +1,7 @@
+<form class="mb-3 p-3">
+  <label for="email" class="form-label">E-mail: </label>
+  <input type="email" name="email" id="email" class="form-control" #email>
+  <label for="senha" class="form-label">Senha: </label>
+  <input type="password" name="senha" id="senha" class="form-control" #password>
+  <button type="button" class="btn btn-primary mt-3" (click)="save(email.value, password.value)">Enviar</button>
+</form>
