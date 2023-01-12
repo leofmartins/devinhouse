@@ -1,0 +1,11 @@
+<label for="field1">Escreva "Leonardo" neste campo: </label>
+<input type="text" id="field1" placeholder="Leonardo" #field>
+<button type="button" (click)="validar(field.value)">Validar</button>
+<ng-template [ngIf]="valorCampo==='Leonardo'">
+  <p style="color:green">Muito bem!!!</p>
+</ng-template>
+<ng-template [ngIf]="valorCampo && valorCampo!='Leonardo'">
+  <p style="color:red">Incorreto :(</p>
+</ng-template>
+
+
