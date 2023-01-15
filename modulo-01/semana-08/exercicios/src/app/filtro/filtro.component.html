@@ -7,6 +7,7 @@
         (click)="obtemFiltro(botao.idFiltro)"
         type="button"
         class="btn btn-outline-dark"
+          [routerLink]="['/' + botao.idFiltro]"
         >
         {{ botao.nomeFiltro }}
       </button>

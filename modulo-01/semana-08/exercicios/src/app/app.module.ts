@@ -34,12 +34,21 @@ const routes: Routes = [
     pathMatch: 'full'
   },{
     path: 'home',
-    component: HomeComponent,
+    component: NotificationListComponent,
     children: childRoutes
   },{
     path: 'sobre',
     component: SobreComponent
-  },
+  },{
+    path: 'lidos',
+    component: LidosComponent
+  },{
+    path: 'nao-lidos',
+    component: NaoLidosComponent
+  },{
+    path: 'todos',
+    component: NotificationListComponent
+  }
 ]
 
 @NgModule({

@@ -15,7 +15,7 @@ export const Model = [
     titulo: 'titulo 3',
     conteudo: 'conteudo 3',
     data: '45 min ago',
-    lido: false
+    lido: true
   }
 
 ]
