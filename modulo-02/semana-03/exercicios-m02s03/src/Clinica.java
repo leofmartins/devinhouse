@@ -102,4 +102,15 @@ class Clinica {
         this.clientes.get(idCliente).setPeso(novoPeso);
         return novoPeso - 5;
     }
+
+    double tratamento(int idCliente, double pesoPerder) {
+        if (this.clientes.get(idCliente) == null) {
+            System.out.println("Cliente não encontrado");
+            return 0;
+        }
+
+        double novoPeso = this.clientes.get(idCliente).getPeso() - pesoPerder;
+        this.clientes.get(idCliente).setPeso(novoPeso);
+        return novoPeso;
+    }
 }
