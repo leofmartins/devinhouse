@@ -10,6 +10,15 @@ class Clinica {
 
     List<Cliente> clientes;
 
+    public Clinica(String nomeDono) {
+        this.nomeDono = nomeDono;
+    }
+
+    public Clinica(String nomeDono, List<Cliente> clientes) {
+        this.nomeDono = nomeDono;
+        this.clientes = clientes;
+    }
+
     public String getNomeDono() {
         return nomeDono;
     }
