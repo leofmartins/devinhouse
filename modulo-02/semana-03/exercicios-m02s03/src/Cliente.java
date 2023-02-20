@@ -1,7 +1,8 @@
 class Cliente {
-    double peso;
-    double altura;
-    int idade;
+    private String nome;
+    private double peso;
+    private double altura;
+    private int idade;
 
     public Cliente(double peso, double altura, int idade) {
         this.peso = peso;
@@ -12,6 +13,14 @@ class Cliente {
     public Cliente(double peso, double altura) {
         this.peso = peso;
         this.altura = altura;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public double getPeso() {

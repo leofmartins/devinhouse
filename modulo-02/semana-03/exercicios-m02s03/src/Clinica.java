@@ -2,10 +2,10 @@ import java.sql.SQLOutput;
 import java.util.List;
 
 class Clinica {
-    String nomeDono;
-    String nomeClinica;
-    String cnpj;
-    String endereco;
+    private String nomeDono;
+    private String nomeClinica;
+    private String cnpj;
+    private String endereco;
     int codigoClinica;
 
     List<Cliente> clientes;
@@ -60,6 +60,10 @@ class Clinica {
     }
 
     public List<Cliente> getClientes() {
+        for (Cliente cliente :
+                clientes) {
+            System.out.println(cliente.getNome());
+        }
         return clientes;
     }
 
@@ -70,6 +74,8 @@ class Clinica {
     public void addCliente(Cliente cliente) {
         clientes.add(cliente);
     }
+
+
 
     static double calculaIMC(double peso, double altura) {
         double imc = peso / (altura * altura);
