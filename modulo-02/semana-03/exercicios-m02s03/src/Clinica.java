@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.List;
 
 class Clinica {
     String nomeDono;
@@ -6,6 +7,8 @@ class Clinica {
     String cnpj;
     String endereco;
     int codigoClinica;
+
+    List<Cliente> clientes;
 
     static double calculaIMC(double peso, double altura) {
         double imc = peso / (altura * altura);
