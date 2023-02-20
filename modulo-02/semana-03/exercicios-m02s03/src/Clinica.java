@@ -91,4 +91,15 @@ class Clinica {
 
         return imc;
     }
+
+    double tratamento(int idCliente) {
+        if (this.clientes.get(idCliente) == null) {
+            System.out.println("Cliente não identificado");
+            return 0;
+        }
+
+        double novoPeso = this.clientes.get(idCliente).getPeso();
+        this.clientes.get(idCliente).setPeso(novoPeso);
+        return novoPeso - 5;
+    }
 }
