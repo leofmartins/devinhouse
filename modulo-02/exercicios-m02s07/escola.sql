@@ -40,3 +40,12 @@ CREATE TABLE aluno_curso (
     FOREIGN KEY(id_aluno) REFERENCES estudantes(id),
     FOREIGN KEY(id_curso) REFERENCES cursos(id)
 );
+
+ALTER TABLE cursos
+DROP (nome_professor);
+
+ALTER TABLE cursos
+ADD professor_id NUMBER;
+
+ALTER TABLE cursos
+ADD CONSTRAINT fk_prof_id FOREIGN KEY(professor_id) REFERENCES professores(id);
