@@ -37,8 +37,8 @@ CREATE TABLE aluno_curso (
     id_curso NUMBER NOT NULL,
     media NUMBER DEFAULT 0 NOT NULL,
     PRIMARY KEY(id),
-    FOREIGN KEY(id_aluno) REFERENCES estudantes(id),
-    FOREIGN KEY(id_curso) REFERENCES cursos(id)
+    FOREIGN KEY(id_aluno) REFERENCES estudantes(id) on delete cascade,
+    FOREIGN KEY(id_curso) REFERENCES cursos(id) on delete cascade
 );
 
 ALTER TABLE cursos
@@ -103,3 +103,22 @@ VALUES (3, 2, 8);
 
 INSERT INTO aluno_curso (id_aluno, id_curso, media)
 VALUES (3, 3, 9);
+
+UPDATE estudantes
+SET media_geral = 8.9
+WHERE id = 1;
+
+UPDATE cursos
+SET ead = 1
+WHERE professor_id = 1;
+
+UPDATE cursos
+SET ead = 1
+WHERE professor_id = 2;
+
+UPDATE cursos
+SET ead = 1
+WHERE professor_id = 3;
+
+DELETE FROM cursos
+WHERE id = 3;
