@@ -50,6 +50,33 @@ ADD professor_id NUMBER;
 ALTER TABLE cursos
 ADD CONSTRAINT fk_prof_id FOREIGN KEY(professor_id) REFERENCES professores(id);
 
+INSERT INTO professores (nome, sobrenome, endereco, telefone, email, data_nascimento, nacionalidade)
+values ('André', 'Pereira', 'Rua Luz da Cidade 123 Santa Luzia/MG', '3133669988', 'andre.pereira@email.com', DATE '1996-05-12', 'brasileiro');
+
+INSERT INTO professores (nome, sobrenome, endereco, telefone, email, data_nascimento, nacionalidade)
+values ('Márcio', 'Andrade', 'Rua Ipês Amarelos 321 Pinhal/SP', '1144553322', 'marcio.andrade@email.com', DATE '1985-07-16', 'brasileiro');
+
+INSERT INTO professores (nome, sobrenome, endereco, telefone, email, data_nascimento, nacionalidade)
+values ('Maria', 'Santos', 'Rua Canto Alegre 213 Miragem/PR', '4136758956', 'maria.santos@email.com', DATE '2002-12-23', 'brasileira');
+
+INSERT INTO estudantes (nome, sobrenome, matricula, email, data_nascimento, nacionalidade, media_geral)
+values ('Amanda', 'Santos', '123456', 'amanda.santos@email.com', DATE '2005-12-26', 'brasileira', 9);
+
+INSERT INTO estudantes (nome, sobrenome, matricula, email, data_nascimento, nacionalidade, media_geral)
+values ('Miguel', 'Antunes', '314253', 'miguel.antunes@email.com', DATE '2005-07-12', 'brasileiro', 8.6);
+
+INSERT INTO estudantes (nome, sobrenome, matricula, email, data_nascimento, nacionalidade, media_geral)
+values ('Lúcia', 'Aguiar', '654321', 'lucia.aguiar@email.com', DATE '2005-02-27', 'brasileira', 9.2);
+
+INSERT INTO cursos (nome, ead, professor_id, num_max_alunos)
+values ('Matemática', 0, 1, 25);
+
+INSERT INTO cursos (nome, ead, professor_id, num_max_alunos)
+values ('Portguês', 1, 2, 25);
+
+INSERT INTO cursos (nome, ead, professor_id, num_max_alunos)
+values ('Ciências', 0, 3, 25);
+
 INSERT INTO aluno_curso (id_aluno, id_curso, media)
 VALUES (1, 1, 10);
 
