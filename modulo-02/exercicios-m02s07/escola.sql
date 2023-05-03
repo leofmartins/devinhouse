@@ -49,3 +49,30 @@ ADD professor_id NUMBER;
 
 ALTER TABLE cursos
 ADD CONSTRAINT fk_prof_id FOREIGN KEY(professor_id) REFERENCES professores(id);
+
+INSERT INTO aluno_curso (id_aluno, id_curso, media)
+VALUES (1, 1, 10);
+
+INSERT INTO aluno_curso (id_aluno, id_curso, media)
+VALUES (1, 2, 8);
+
+INSERT INTO aluno_curso (id_aluno, id_curso, media)
+VALUES (1, 3, 9);
+
+INSERT INTO aluno_curso (id_aluno, id_curso, media)
+VALUES (2, 1, 7);
+
+INSERT INTO aluno_curso (id_aluno, id_curso, media)
+VALUES (2, 2, 8);
+
+INSERT INTO aluno_curso (id_aluno, id_curso, media)
+VALUES (2, 3, 9.5);
+
+INSERT INTO aluno_curso (id_aluno, id_curso, media)
+VALUES (3, 1, 8);
+
+INSERT INTO aluno_curso (id_aluno, id_curso, media)
+VALUES (3, 2, 8);
+
+INSERT INTO aluno_curso (id_aluno, id_curso, media)
+VALUES (3, 3, 9);
