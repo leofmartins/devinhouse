@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div>
+    <div th:each="pessoa:${pessoas}">
+      <div th:text="${pessoa.nome}"></div>
+      <div th:text="${pessoa.idade}"></div>
+    </div>
+  </div>
+</body>
+</html>
