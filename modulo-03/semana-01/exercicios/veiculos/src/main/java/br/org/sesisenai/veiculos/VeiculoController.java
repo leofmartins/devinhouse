@@ -34,7 +34,7 @@ public class VeiculoController {
 
   @GetMapping("/{placa}")
   public ResponseEntity<Veiculo> consultarVeiculo(@PathVariable String placa) {
-    Veiculo veiculo = veiculoService.consultaar(placa);
+    Veiculo veiculo = veiculoService.consultar(placa);
     return ResponseEntity.ok(veiculo);
   }
 

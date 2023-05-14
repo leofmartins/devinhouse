@@ -2,6 +2,7 @@ package br.org.sesisenai.veiculos;
 
 import exceptions.VeiculoExistenteException;
 import exceptions.VeiculoNaoEncontrado;
+import exceptions.VeiculoPossuiMultasException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,13 +30,16 @@ public class VeiculoService {
     return veiculoRepo.findAll();
   }
 
-  public Veiculo consultaar(String placa) {
+  public Veiculo consultar(String placa) {
     return veiculoRepo.findById(placa).orElseThrow(VeiculoNaoEncontrado::new);
   }
 
   public void delete(String placa) {
     var veiculo = veiculoRepo.findById(placa).orElseThrow(VeiculoNaoEncontrado::new);
-    veiculoRepo.delete(veiculo);
+    boolean possuiMulta = veiculo.getQtdMultas() > 0;
+    if (!possuiMulta)
+      veiculoRepo.delete(veiculo);
+    throw new VeiculoPossuiMultasException();
   }
 
   public Veiculo adicionarMulta(String placa) {

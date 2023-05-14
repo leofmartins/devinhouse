@@ -3,6 +3,6 @@ package exceptions;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.NOT_FOUND)
-public class VeiculoNaoEncontrado extends RuntimeException {
+@ResponseStatus(HttpStatus.FORBIDDEN)
+public class VeiculoPossuiMultasException extends RuntimeException {
 }
