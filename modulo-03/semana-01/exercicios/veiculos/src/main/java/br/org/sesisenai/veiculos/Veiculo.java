@@ -1,4 +1,4 @@
-package model;
+package br.org.sesisenai.veiculos;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -21,7 +21,11 @@ public class Veiculo {
 
   String cor;
 
-  LocalDate anoDeFabricacao;
+  Integer anoDeFabricacao;
 
   Integer qtdMultas;
+
+  public void adicionarMulta() {
+    qtdMultas++;
+  }
 }
