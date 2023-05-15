@@ -12,7 +12,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -96,7 +95,7 @@ class VeiculoServiceTest {
   }
 
   @Test
-  @DisplayName("Quando exitir veiculo com a placa informada, deve excluir o veiculo")
+  @DisplayName("Quando existir veiculo com a placa informada, e nao possui multas, deve excluir o veiculo")
   void delete() {
     when(veiculoRepository.findById(anyString()))
       .thenReturn(Optional.of(veiculoSalvo));
@@ -115,7 +114,7 @@ class VeiculoServiceTest {
   }
 
   @Test
-  @DisplayName("Quando exitir veiculo com a placa informada e houve multas, nao deve excluir o veiculo")
+  @DisplayName("Quando existir veiculo com a placa informada, e houve multas, nao deve excluir o veiculo")
   void deleteVeiculoComMultas() {
     veiculoSalvo.setQtdMultas(1);
     when(veiculoRepository.findById(anyString()))
@@ -126,7 +125,7 @@ class VeiculoServiceTest {
   }
 
   @Test
-  @DisplayName("Quando cusultar por id, e nao encontrar registro, deve lançar exceçao VeiculoNaoEncontradoExecption")
+  @DisplayName("Quando consultar por id, e nao encontrar registro, deve lançar exceçao VeiculoNaoEncontradoExecption")
   public void testConsultarVeiculoNaoEncontrado() {
      when(veiculoRepository.findById(anyString()))
        .thenThrow(VeiculoNaoEncontradoException.class);
@@ -136,6 +135,23 @@ class VeiculoServiceTest {
   }
 
   @Test
+  @DisplayName("Quando o veiculo nao for encontrado, deve lançar exceçao")
+  void adicionarMultaVeiculoNaoEncontrado() {
+    when(veiculoRepository.findById(anyString()))
+      .thenThrow(VeiculoNaoEncontradoException.class);
+
+    assertThrows(VeiculoNaoEncontradoException.class,
+            () -> veiculoService.adicionarMulta(veiculoRequest.getPlaca()));
+  }
+
+  @Test
+  @DisplayName("Quando o veiculo for encontrato, deve incrementar o numero de multas")
   void adicionarMulta() {
+    when(veiculoRepository.findById(anyString()))
+            .thenReturn(Optional.ofNullable(veiculoSalvo));
+
+    Veiculo veiculoMultaIncrementado = veiculoService.adicionarMulta(veiculoSalvo.getPlaca());
+
+    assertEquals(1, veiculoMultaIncrementado.getQtdMultas());
   }
 }
