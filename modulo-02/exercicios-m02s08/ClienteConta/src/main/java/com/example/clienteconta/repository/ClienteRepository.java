@@ -1,11 +1,12 @@
 package com.example.clienteconta.repository;
 
 import com.example.clienteconta.model.Cliente;
-import com.example.clienteconta.service.ClienteService;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.clienteconta.service.ClienteService.cpfValido;
 
 @Repository
 public class ClienteRepository {
@@ -16,8 +17,9 @@ public class ClienteRepository {
   }
 
   public void salvarCliente(Cliente cliente) {
-    if (ClienteService.validaCpf(cliente.getCpf()))
+    if (cpfValido(cliente.getCpf())) {
       clienteList.add(cliente);
+    }
   }
 
   public Cliente pesquisarClientePeloId(Integer id) {
