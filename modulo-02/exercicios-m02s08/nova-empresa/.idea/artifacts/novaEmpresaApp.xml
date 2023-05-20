@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="novaEmpresaApp">
+    <output-path>$PROJECT_DIR$/out/artifacts/myapp</output-path>
+    <root id="root">
+      <element id="module-output" name="nova-empresa" />
+      <element id="library" level="project" name="Java EE 6-Java EE 6" />
+    </root>
+  </artifact>
+</component>
