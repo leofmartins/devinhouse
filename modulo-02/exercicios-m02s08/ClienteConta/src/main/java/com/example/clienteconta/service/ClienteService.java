@@ -1,7 +1,7 @@
 package com.example.clienteconta.service;
 
 public class ClienteService {
-  public static boolean validaCpf(String cpf) {
+  public static boolean cpfValido(String cpf) {
     cpf = cpf.replaceAll("[^0-9]", "");
 
     if (cpf.length() != 11)
