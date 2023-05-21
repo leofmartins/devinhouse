@@ -43,6 +43,22 @@ public class ContaController {
     return new ResponseEntity<>(HttpStatus.OK);
   }
 
+  @PostMapping(value = "{idOrigem}/transferir/{idDestitno}/{valor}")
+  public ResponseEntity<?> trasferir(@PathVariable Integer idOrigem,
+                                     @PathVariable Integer idDestitno,
+                                     @PathVariable Double valor) {
+    Conta origem = contaRepo.pesquisarContaPeloId(idOrigem);
+    Conta destino = contaRepo.pesquisarContaPeloId(idDestitno);
+    Double saldoOriginalContaOrigem = origem.getSaldo();
+    contaRepo.sacar(idOrigem, valor);
+    Double novoSaldoContaOrigem = origem.getSaldo();
+    if (novoSaldoContaOrigem < saldoOriginalContaOrigem) {
+      contaRepo.depositar(idDestitno, valor);
+      return ResponseEntity.ok(origem + destino.toString());
+    }
+    return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+  }
+
   @DeleteMapping("/{id}")
   public ResponseEntity<?> deleteConta(@PathVariable Integer id) {
     contaRepo.deletarContaPeloId(id);
